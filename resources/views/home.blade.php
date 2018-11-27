@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Questions
-                        <a class="btn btn-primary float-right" href="#">
+                        <a class="btn btn-primary float-right" href="{{ route('questions.create') }}">
                             Create a Question
                         </a>
 
@@ -37,10 +37,10 @@
                                         </div>
                                     </div>
                                 @empty
-                                    There are no questions to view, you can  create a question.
+                                     <a class="btn btn-primary " href="{{ route('questions.create')}}">
+                                         There are no questions to view, you can  create a question.
+                                     </a>
                                 @endforelse
-
-
                             </div>
 
                         </div>
