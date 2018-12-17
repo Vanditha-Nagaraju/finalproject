@@ -11,7 +11,7 @@
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3QXrSb2RmeSZdYHQsZ_Gl8nTt1QQpJzU27iSIfN8EXWUNFQ0H8g"
                                  class="w-100 mb-1">
                         </div>
-                        <h5 class="m-0"><strong>{{ $users->name }}</strong></h5>
+                        <h5 class="m-0"><strong>{{ $users->email }}</strong></h5>
                         <p class="mb-2">
                             <small>Following: <span class="badge badge-primary" userid={{$users->id}}>{{ $users->followings()->get()->count() }}</span>
                             </small>
