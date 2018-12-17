@@ -10,3 +10,10 @@ To run the FAQ project:
   The user can see whom he/she is following or being followed by clicking on 'My Profile' (From the drop-down on the right top of the home page). The count gets updated as the people the user follows/being followed.
   
   Heroku link :  https://final100.herokuapp.com/
+  
+  User Stories:
+  1. An user can register himself/herself.
+  2. A registered user can login and view various other users to follow them
+  3. A registered user can login and view various other users to Unfollow them
+  4. A registered can view his/her own followers/users following by visiting 'My Profile' tab in the drop down on the home page
+  
