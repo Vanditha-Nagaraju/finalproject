@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Question;
 class HomeController extends Controller
 {
     /**
@@ -19,29 +20,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    //public function index()
-    //{
-    //$user = Auth::user();
-    //$question = $user->questions()->paginate(6);
-    //return view('home')->with('questions', $question);
-    //}
+
     public function index()
     {
         $user = Auth::user();
-        //$question = $user->questions()->paginate(6);
         $users = User::get();
         return view('users', ['users' => User::where('id', '!=', Auth::id())->get()]);
-
     }
 
-    //public function index1()
-    //{
-    //return view('Follow', [
-    //'users' => User::where('id', '!=', Auth::id())->get()
-    //]);
-    //}
+    public function index1()
+    {
+        $user = Auth::user();
+        $questions = $user->questions()->paginate(6);
+        return view('home')->with('questions', $questions);
+    }
     /**
-     * Show the application of itsolutionstuff.com.
      *
      * @return \Illuminate\Http\Response
      */
@@ -51,7 +44,6 @@ class HomeController extends Controller
         return view('usersView', compact('user'));
     }
     /**
-     * Show the application of itsolutionstuff.com.
      *
      * @return \Illuminate\Http\Response
      */
