@@ -33,7 +33,7 @@
                             </div>
                             <div class="tab-pane fade" id="following" role="tabpanel" aria-labelledby="nav-profile-tab">
                                 <div class="row pl-5">
-                                    @include('userList', ['user'=>$user->followings()->get()])
+                                    @include('userList', ['users'=>$user->followings()->get()])
                                 </div>
                             </div>
                         </div>
