@@ -5,9 +5,8 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use App\User;
 
-class CountTest extends TestCase
+class UnfollowTest extends TestCase
 {
     /**
      * A basic test example.
@@ -16,8 +15,9 @@ class CountTest extends TestCase
      */
     public function testExample()
     {
-        $countusers = User::all();
-        $countusers->count();
-        $this->assertEquals(134, count($countusers));
+        $user = factory(\App\User::class)->make();
+        $user->save();
+        $unfollow = factory(\App\User::class)->make();
+        $this->assertTrue($unfollow->save());
     }
 }
