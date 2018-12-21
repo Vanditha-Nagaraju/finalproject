@@ -16,7 +16,7 @@ class UnfollowTest extends TestCase
     public function testExample()
     {
         $user = factory(\App\User::class)->make();
-        $user->save();
+        $user->delete();
         $unfollow = factory(\App\User::class)->make();
         $this->assertTrue($unfollow->save());
     }
